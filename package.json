@@ -23,9 +23,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
+    "react-dom": "^19.0.0",
     "react-scripts": "^5.0.1"
   },
   "browserslist": {
