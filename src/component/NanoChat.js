@@ -38,10 +38,11 @@ export default () => {
       length: "medium",
     };
 
-    // Append the user's message immediately
     setMessages((prev) => [...prev, { role: "user", text: userInput }]);
 
     try {
+      setMessages((prev) => [...prev, { role: "assistant", text: "..." }]);
+
       let response, languageModel, summarizer;
 
       switch (selectedFunction) {
@@ -62,19 +63,21 @@ export default () => {
         default:
           response = "Unknown function selected";
       }
+
       setMessages((prev) => [
-        ...prev,
+        ...prev.slice(0, -1),
         { role: "assistant", text: response || "No response" },
       ]);
     } catch (error) {
       console.error("Error during processing:", error);
       setMessages((prev) => [
-        ...prev,
+        ...prev.slice(0, -1),
         { role: "assistant", text: "Sorry, something went wrong." },
       ]);
     }
     setUserInput("");
   };
+
 
   const handleUpdateSharedContext = () => {
     if (newSharedContext.trim()) {

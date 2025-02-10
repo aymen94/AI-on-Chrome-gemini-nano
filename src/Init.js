@@ -32,17 +32,19 @@ export default () => {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "flex-start", m: 1 }}>
-                <div style={{ cursor: "pointer", fontSize: "1.5rem", marginRight: "1rem" }} onClick={() => setDarkMode((prev) => !prev)}>
-                    {darkMode ? "🌖" : "🌒"}
-                </div>
-                <div style={{ textAlign: "center", flexGrow: 1, fontSize: "1.5rem" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", p: 2 }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", mb: 2 }}>
+                    <div style={{ cursor: "pointer", fontSize: "1rem" }} onClick={() => setDarkMode((prev) => !prev)}>
+                        {darkMode ? "🌙" : "☀️"}
+                    </div>
+                </Box>
+                <Box >
                     {isGeminiAvailable ? (
                         <NanoChat />
                     ) : (
                         <Instructions />
                     )}
-                </div>
+                </Box>
             </Box>
         </ThemeProvider>
     );

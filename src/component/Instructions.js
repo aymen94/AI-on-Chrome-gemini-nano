@@ -97,6 +97,18 @@ const Instructions = () => {
             For more info, view: <a href="https://developer.chrome.com/docs/ai/get-started" target="_blank" rel="noopener noreferrer">https://developer.chrome.com/docs/ai/get-started</a>
           </Typography>
         </Box>
+        <Box sx={{ mt: 4 }}>
+          <Typography variant="body2">
+            GitHub Repo:{" "}
+            <a
+              href="https://github.com/aymen94/AI-on-Chrome-gemini-nano"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/aymen94/AI-on-Chrome-gemini-nano
+            </a>
+          </Typography>
+        </Box>
       </CardContent>
     </Card>
   );

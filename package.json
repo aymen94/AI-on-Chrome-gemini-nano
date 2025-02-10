@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test"
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/aymen94/AI-on-Chrome-gemini-nano/issues"
   },
-  "homepage": ".",
+  "homepage": "https://aymen94.github.io/AI-on-Chrome-gemini-nano/",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -37,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
